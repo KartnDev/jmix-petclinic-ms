@@ -1,0 +1,4 @@
+rootProject.name = 'jmix-petclinic-ms'
+includeBuild 'pet-service'
+includeBuild 'veterinarian-service'
+includeBuild 'owner-service'
