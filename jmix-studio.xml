@@ -2,6 +2,19 @@
 <project version="4">
   <component name="JmixDataStoreSettingsManager">
     <moduleSettings>
+      <entry key="com.company.owner-service.main">
+        <ModuleSettings>
+          <option name="dataStoreOptionsV2">
+            <map>
+              <entry key="main">
+                <value>
+                  <DataStoreSettingsV2 />
+                </value>
+              </entry>
+            </map>
+          </option>
+        </ModuleSettings>
+      </entry>
       <entry key="com.company.pet-service.main">
         <ModuleSettings>
           <option name="dataStoreOptionsV2">
@@ -15,6 +28,93 @@
           </option>
         </ModuleSettings>
       </entry>
+      <entry key="io.jmix.owner-service.main">
+        <ModuleSettings>
+          <option name="dataStoreOptionsV2">
+            <map>
+              <entry key="main">
+                <value>
+                  <DataStoreSettingsV2>
+                    <option name="generateDdlType" value="CREATE_AND_UPDATE" />
+                    <option name="supportedTypes">
+                      <option value="postgres" />
+                    </option>
+                  </DataStoreSettingsV2>
+                </value>
+              </entry>
+            </map>
+          </option>
+        </ModuleSettings>
+      </entry>
+      <entry key="io.jmix.pet-service.main">
+        <ModuleSettings>
+          <option name="dataStoreOptionsV2">
+            <map>
+              <entry key="main">
+                <value>
+                  <DataStoreSettingsV2>
+                    <option name="generateDdlType" value="CREATE_AND_UPDATE" />
+                    <option name="supportedTypes">
+                      <option value="postgres" />
+                    </option>
+                  </DataStoreSettingsV2>
+                </value>
+              </entry>
+            </map>
+          </option>
+        </ModuleSettings>
+      </entry>
+      <entry key="io.jmix.veterinarian-service.main">
+        <ModuleSettings>
+          <option name="dataStoreOptionsV2">
+            <map>
+              <entry key="main">
+                <value>
+                  <DataStoreSettingsV2>
+                    <option name="generateDdlType" value="CREATE_AND_UPDATE" />
+                    <option name="supportedTypes">
+                      <option value="postgres" />
+                    </option>
+                  </DataStoreSettingsV2>
+                </value>
+              </entry>
+            </map>
+          </option>
+        </ModuleSettings>
+      </entry>
+      <entry key="owner-service.main">
+        <ModuleSettings>
+          <option name="dataStoreOptionsV2">
+            <map>
+              <entry key="main">
+                <value>
+                  <DataStoreSettingsV2>
+                    <option name="generateDdlType" value="CREATE_AND_UPDATE" />
+                    <option name="supportedTypes">
+                      <option value="postgres" />
+                    </option>
+                  </DataStoreSettingsV2>
+                </value>
+              </entry>
+            </map>
+          </option>
+        </ModuleSettings>
+      </entry>
     </moduleSettings>
+  </component>
+  <component name="JmixPluginProjectSettings">
+    <option name="isHotDeploy" value="false" />
+    <option name="savedDbProperties">
+      <list>
+        <SavedDbProperties>
+          <option name="databaseName" value="ownerservice" />
+          <option name="dbType" value="hsqlfile" />
+          <option name="dbmsVersion" />
+          <option name="host" value=".jmix/hsqldb" />
+          <option name="url" value="jdbc:hsqldb:file:.jmix/hsqldb/ownerservice" />
+          <option name="user" value="sa" />
+        </SavedDbProperties>
+      </list>
+    </option>
   </component>
 </project>

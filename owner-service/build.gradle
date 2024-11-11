@@ -11,7 +11,7 @@ jmix {
     bomVersion = '2.4.0'
 }
 
-group = 'com.company'
+group = 'io.jmix'
 version = '0.0.1-SNAPSHOT'
 
 repositories {
@@ -36,12 +36,16 @@ dependencies {
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    runtimeOnly 'org.hsqldb:hsqldb'
 
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
     testImplementation 'io.jmix.flowui:jmix-flowui-test-assist'
+    implementation 'org.postgresql:postgresql'
+    implementation 'io.jmix.oidc:jmix-oidc-starter'
+    implementation 'io.jmix.restds:jmix-restds-starter'
+    implementation 'io.jmix.rest:jmix-rest-starter'
+
 }
 
 configurations.implementation {

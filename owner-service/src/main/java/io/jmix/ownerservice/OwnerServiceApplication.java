@@ -1,4 +1,4 @@
-package io.jmix.veterinarianservice;
+package io.jmix.ownerservice;
 
 import com.google.common.base.Strings;
 import com.vaadin.flow.component.page.AppShellConfigurator;
@@ -23,16 +23,16 @@ import javax.sql.DataSource;
 import java.util.List;
 
 @Push
-@Theme(value = "veterinarian-service")
-@PWA(name = "Veterinarian Service", shortName = "Veterinarian Service")
+@Theme(value = "owner-service")
+@PWA(name = "Owner Service", shortName = "Owner Service")
 @SpringBootApplication
-public class VeterinarianServiceApplication implements AppShellConfigurator {
+public class OwnerServiceApplication implements AppShellConfigurator {
 
     @Autowired
     private Environment environment;
 
     public static void main(String[] args) {
-        SpringApplication.run(VeterinarianServiceApplication.class, args);
+        SpringApplication.run(OwnerServiceApplication.class, args);
     }
 
     @Bean
@@ -51,7 +51,7 @@ public class VeterinarianServiceApplication implements AppShellConfigurator {
 
     @EventListener
     public void printApplicationUrl(final ApplicationStartedEvent event) {
-        LoggerFactory.getLogger(VeterinarianServiceApplication.class).info("Application started at "
+        LoggerFactory.getLogger(OwnerServiceApplication.class).info("Application started at "
                 + "http://localhost:"
                 + environment.getProperty("local.server.port")
                 + Strings.nullToEmpty(environment.getProperty("server.servlet.context-path")));
