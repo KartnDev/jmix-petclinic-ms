@@ -3,7 +3,6 @@
 
     <menu id="application" title="msg://io.jmix.petservice/menu.application.title" opened="true">
         <item view="User.list" title="msg://io.jmix.petservice.view.user/UserListView.title"/>
-        <item view="Pet.list" title="msg://io.jmix.petservice.view.pet/petListView.title"/>
     </menu>
 
 </menu-config>
