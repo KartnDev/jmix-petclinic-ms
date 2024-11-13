@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<view xmlns="http://jmix.io/schema/flowui/view"
+      xmlns:c="http://jmix.io/schema/flowui/jpql-condition"
+      title="msg://ownerListView.title"
+      focusComponent="ownersDataGrid">
+    <data>
+        <collection id="ownersDc"
+                    class="io.jmix.ownerservice.entity.Owner">
+            <fetchPlan extends="_base">
+                <property name="user" fetchPlan="_base"/>
+            </fetchPlan>
+            <loader id="ownersDl" readOnly="true">
+                <query>
+                    <![CDATA[select e from Owner e]]>
+                </query>
+            </loader>
+        </collection>
+    </data>
+    <facets>
+        <dataLoadCoordinator auto="true"/>
+        <urlQueryParameters>
+            <genericFilter component="genericFilter"/>
+            <pagination component="pagination"/>
+        </urlQueryParameters>
+    </facets>
+    <actions>
+        <action id="selectAction" type="lookup_select"/>
+        <action id="discardAction" type="lookup_discard"/>
+    </actions>
+    <layout>
+        <genericFilter id="genericFilter"
+                       dataLoader="ownersDl">
+            <properties include=".*"/>
+        </genericFilter>
+        <hbox id="buttonsPanel" classNames="buttons-panel">
+            <button id="createButton" action="ownersDataGrid.create"/>
+            <button id="editButton" action="ownersDataGrid.edit"/>
+            <button id="removeButton" action="ownersDataGrid.remove"/>
+            <simplePagination id="pagination" dataLoader="ownersDl"/>
+        </hbox>
+        <dataGrid id="ownersDataGrid"
+                  width="100%"
+                  minHeight="20em"
+                  dataContainer="ownersDc"
+                  columnReorderingAllowed="true">
+            <actions>
+                <action id="create" type="list_create"/>
+                <action id="edit" type="list_edit"/>
+                <action id="remove" type="list_remove"/>
+            </actions>
+            <columns resizable="true">
+                <column property="legals"/>
+                <column property="user"/>
+            </columns>
+        </dataGrid>
+        <hbox id="lookupActions" visible="false">
+            <button id="selectButton" action="selectAction"/>
+            <button id="discardButton" action="discardAction"/>
+        </hbox>
+    </layout>
+</view>

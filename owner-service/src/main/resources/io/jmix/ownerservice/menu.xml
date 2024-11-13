@@ -3,6 +3,9 @@
 
     <menu id="application" title="msg://io.jmix.ownerservice/menu.application.title" opened="true">
         <item view="User.list" title="msg://io.jmix.ownerservice.view.user/UserListView.title"/>
+        <item view="PetProjection.list"
+              title="msg://io.jmix.ownerservice.view.petprojection/petProjectionListView.title"/>
+        <item view="Owner.list" title="msg://io.jmix.ownerservice.view.owner/ownerListView.title"/>
     </menu>
 
 </menu-config>
